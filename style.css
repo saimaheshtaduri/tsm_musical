@@ -1,0 +1,579 @@
+*{
+    margin:0;
+    padding:0;
+}
+/*================ Logo ===================*/
+.go{
+    font-family:Monospace;
+    font-size:30px;
+    position:relative;
+    left:30vw;
+    bottom:150px;
+    color:white;
+    font-weight:bold;
+    font-variant:small-caps ;
+    border:2px dashed black;
+    border-radius:25px;
+    padding:5px 25px;
+    background-color:#ff0066;
+    animation:fadein both 2s 8s;
+    transform:rotateY(90deg);
+    
+}
+#logo{
+    border:1px solid red;
+    overflow:hidden;
+    position:absolute;
+    background-color:white;
+    width:100vw;
+    height:100vh;
+    z-index:5;
+    
+}
+
+#keys{
+    width:40vh;
+    height:40vh;
+    margin:25vh 20vw;
+    padding:5px;
+    overflow:auto;
+    perspective:300px;
+}
+.play,.pause,.stop,.repeat{
+    display:inline-block;
+    width:40%;
+    height:40%;
+    border:1px solid black;
+    border-radius:50%;
+    text-align:center;
+    position:relative;
+    float:left;
+    background-color:rgba(0,0,0,.8);
+    
+    
+}
+.note{
+    position:relative;
+    left:10px;
+    bottom:210px;
+}
+.note img{
+    animation:fadein ease-out both 1s 4s;
+}
+
+.note span{
+    font-size:50px;
+    font-family:'Sora';
+    letter-spacing:8px;
+    position:absolute;
+    left:27%;
+    bottom:20%;
+    z-index:-1;
+    animation:music1 1s both 4s,music2 .8s forwards 4.83s,music3 ease-out forwards 1s 5.7s;
+}
+
+.note a{
+    animation:music4 1s 6.6s both;
+    text-align:center;
+    border-radius:50%;
+    font-size:50px;
+    
+}
+
+.play{
+    transform:rotateY(115deg);
+    transform-origin:left;
+    animation:play linear both 1s;
+}
+.play img{
+    animation:fadein ease-out both 2s;
+}
+.pause{
+    transform:rotateY(95deg);
+    transform-origin:left;;
+    animation:pause linear both 1s 1s;
+}
+.pause img{
+    animation:fadein ease-out both 2s 1s;
+}
+.stop{
+    transform:rotateY(95deg);
+    transform-origin:right;
+    animation:pause ease-out both 1s 3s;
+}
+.stop img{
+    animation:fadein linear both 2s 3s;
+}
+.repeat{
+    transform:rotateX(84.9deg);
+    transform-origin:top;
+    animation:repeat linear both 1s 2s;
+}
+.repeat img{
+    animation:fadein linear both 2s 2s;
+}
+
+/*=========== Keyframes (Logo) ===============*/
+
+#keys img{
+    position:absolute;
+    top:20%;
+    left:20%;
+}
+@keyframes play{
+    0%{transform:rotateY(90deg);}
+    100%{transform:rotateY(0deg);}
+}
+
+@keyframes pause{
+    0%{transform:rotateY(-84.9deg);}
+    100%{transform:rotateY(0deg);}
+}
+
+@keyframes repeat{
+    0%{transform:rotateX(84.9deg);}
+    100%{transform:rotateX(0deg);}
+}
+
+@keyframes stop{
+    0%{transform:rotateY(-84.9deg);}
+    100%{transform:rotateY(0deg);}
+}
+
+
+@keyframes fadein{
+    0%{opacity:0;transform:rotateY(90deg);}
+    100%{opacity:1;transform:rotateY(0deg);}
+}
+@keyframes music{
+    0%{left:102vw;letter-spacing:8px;}
+    40%{left:15%;letter-spacing:8px;}
+    60%{left:15%;letter-spacing:0px;}
+    80%{left:15%;letter-spacing:8px;}
+}
+
+@keyframes music1{
+    0%{left:102vw;letter-spacing:8px;bottom:9%;}
+    100%{left:16%;letter-spacing:8px;bottom:9%;}
+}
+
+@keyframes music2{
+    0%{left:16%;letter-spacing:8px;bottom:9%;}
+    100%{left:13%;letter-spacing:-12px;bottom:9%;}
+}
+
+@keyframes music3{
+    0%{left:13%;letter-spacing:-12px;bottom:9%;}
+    100%{left:27%;letter-spacing:8px;bottom:20%;}
+}
+@keyframes music4{
+    0%{background-color:white;color:black;font-size:50px;font-weight:normal;}
+    50%{background-color:#ff0066;color:white;font-size:50px;font-weight:normal;}
+    
+    100%{background-color:#ff0066;color:white;font-size:65px;font-weight:bold;}
+}
+
+/*============== Backpage ===================*/
+
+#backpage{
+    width:99.8vw;
+    max-height:100vh;
+    background-color:#ff80bf;
+    position:absolute;
+    z-index:4;
+    color:white;
+    box-shadow:2px 2px 2px 2px rgba(0,0,0,.2);
+    padding-left:5px;
+    padding-right:5px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    box-sizing:border-box ;
+    border:2px groove white;
+   /* position:fixed;
+    pointer-events:none;*/
+}
+header{
+    margin-top:10px;
+    height:90px;
+     border:.6px solid white;
+    border-radius:15px;
+    padding:5px 15px;
+    overflow-y:scroll;
+   /* background-color:#b3daff;*/
+}
+
+header .div2{
+    height:40px;
+    border-radius:25px;
+    overflow:hidden;
+    margin-top:3px;
+    border:1px solid black;
+    
+}
+header .div2 button{
+    height:inherit;
+    width:70px;
+    float:right;
+    border:0;
+    background-color:#4da6ff;
+    border-left:2px solid black;
+    font-family:'Sora';
+    color:white;
+}
+
+header .div2 input{
+    width:calc(100% - 89px);
+    height:calc(100% - 4px);
+    padding-left:15px;
+}
+
+header .div1{
+    text-align:center;
+}
+header .div1 span span{
+    position:relative;
+    bottom:5px;
+    font-weight:20px;
+    font-size:30px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header .menu{
+    float:left;
+    border-radius:15px;
+    border:1px solid black;
+    padding:5px 25px;
+    background-color:white;
+    font-family:'Sora';
+}
+legend{
+    font-family:'Sora';
+    font-size:20px;
+    font-weight:bold;
+    font-variant:small-caps ;
+    letter-spacing:2px;
+}
+
+#backpage hr{
+    margin:5px;
+    margin-bottom:20px;
+}
+
+fieldset{
+    border-radius:10px;
+    border:2px double white;
+    margin-bottom:50px;
+    
+}
+
+.Lang .albums{
+    height:300px;
+    width:calc(100vw - 30px);
+   /* border:2px solid black;*/
+    margin:10px 2px;
+    display:flex;
+    overflow:auto;
+    
+}
+
+
+.Lang .albums .flip div{
+    height:290px;
+    width:200px;
+    border:2px solid black;
+    border-radius:10px;
+    margin-right:20px;
+    background-color:white;
+    overflow-x:auto;
+}
+
+.Lang .front img
+{
+    padding:25px 2px;
+    height:200px;
+    width:calc(200px - 4px);
+    border:.7px solid black;
+    border-radius:5px;
+}
+
+.Lang .flip div p{
+    color:black;
+    font-size:20px;
+    font-weight:bold;
+    
+}
+.back{
+      transform:rotateY(90deg);
+      transform-type:preserve-3d;
+      position:relative ;
+      top:-294px;
+     /* animation:album1 both linear 4s 4s;*/
+}
+
+.back .playbutton{
+    width:80px;
+    height:80px;
+    position:absolute ;
+    left:60px;
+    top:80px;
+    border-radius:50%;
+    border:2px groove white;
+    background-color:rgba(0,0,0,.8);
+    transform:translateZ(50px);
+    transform-type:preserve-3d;
+}
+
+.back .sharebutton{
+    width:50px;
+    height:50px;
+    position:absolute  ;
+    left:5px;
+    top:110px;
+    border-radius:50%;
+    border:2px groove white;
+    background-color:rgba(0,0,0,.8);
+}
+
+.back .Favbutton{
+    width:50px;
+    height:50px;
+    position:absolute  ;
+    right:5px;
+    top:110px;
+    border-radius:50%;
+    border:2px groove white;
+    background-color:rgba(0,0,0,.8);
+}
+
+
+.flip:hover .front{
+    animation:album2 ease-in both .3s;
+}
+
+.flip:hover .back{
+    animation:album1 ease-out both .3s .3s;
+}
+
+
+/* ========= Album anime ================*/
+@keyframes album1{
+    0%{transform:perspective(500px) rotateY(-90deg);}
+    100%{transform:perspective(500px) rotateY(0deg);}
+}
+
+@keyframes album2{
+    0%{transform:perspective(500px) rotateY(0deg);}
+    100%{transform:perspective(500px) rotateY(90deg);}
+}
+
+
+/*============ Menu ===================*/
+#menupage{
+    position:absolute;
+    background-color:blue;
+    z-index:3;
+    background-color:rgba(0,0,0,.2);
+    height:100vh;
+}
+
+#menu{
+    margin:20vh 30vw;
+    width:170px;
+    /*height:350px;*/
+    background-color:white;
+    border-radius:10px;
+    color:rgba(255, 0, 102,.9);
+    overflow:hidden;
+  /* animation:exitmenu linear both 4s;*/
+    border:2px solid black;
+    transform-origin:top left;
+}
+
+
+#menu .mymenu{
+    text-align:center;
+    font-size:17px;
+    font-weight:bold;
+    padding:20px;
+    padding-bottom:2px;
+    font-family:'Times New Roman';
+    letter-spacing:2px;
+   /*border:1px solid black;*/
+    margin-top:10px;
+}
+
+#menu .mymenu button{
+    float:right;
+    margin-right:15px;
+    background-color:initial;
+    border:0;
+    color:rgba(255, 0, 102,.9)
+}
+
+
+#menu hr{
+    border:0.5px solid black;
+    margin:5px;
+}
+
+#menu .mymenu_opt {
+     text-align:center;
+     margin:15px;
+}
+
+#menu .mymenu_opt button{
+background-color:initial;
+font-size:19px;
+font-family:'Sora';
+border:0;
+color:rgba(255, 0, 102,.9);
+
+}
+
+/*===========Keyframes (Menu) ==============*/
+
+@keyframes menu_opt-right{
+    0%{transform:translateX(115vw);}
+}
+@keyframes menu_opt-left{
+    0%{transform:translateX(-115vw);}
+}
+@keyframes exitmenu{
+    0%{transform:rotateZ(0deg);}
+    30%{transform:rotateZ(35deg);}
+    65%{transform:rotateZ(17deg);}
+    85%{transform:rotateZ(20deg);}
+    100%{transform:translateY(100vh);}
+}
+
+/*=========== M😉P ================*/
+
+#mp{
+    position:sticky;
+    bottom:0;
+    height:80px;
+    width:calc(100vw - 10px);
+    box-sizing:border-box ;
+    border:2px solid black;
+    border-radius:50px;
+    background-color:white;
+}
+#mp{
+    display:flex;
+}
+.beats{
+    margin-top:20px;
+    margin-left:15px;
+    margin-bottom:20px;
+    display:flex;
+    overflow-y:hidden;
+}
+
+.beats div{
+    width:17px;
+    height:60px;
+    background-color:pink;
+    border:3px solid black;
+    position:relative;
+    box-sizing:border-box ;
+}
+.beats .div1{
+    top:20px;
+   
+}
+.beats .div2{
+    top:10px;
+   
+}
+.beats .div3{
+    top:15px;
+    
+}
+.beats .div4{
+    top:20px;
+   
+}
+#mp .tracksong{
+    padding:5px;
+    padding-bottom:15px;;
+    width:50vw;
+    box-sizing:border-box ;
+}
+#mp .mp_buttons{
+     float:right;
+     width:80px;
+     margin-top:10px;
+     margin-bottom:10px;
+     padding:5px;
+     padding-top:10px;
+}
+
+#mp .mp_buttons button{
+    margin-right:6px;
+    border:1px groove black;
+    border-radius:20px;
+    background-color:pink;
+    padding:2px;
+}
+
+#mp .mp_buttons .stop{
+    margin-right:0px;
+}
+#mp .mp_buttons .mute{
+    padding-right:2px;
+}
+
+#mp .tracksong .nowplay{
+    height:60%;
+    border:1px solid black;
+    color:black;
+    position:relative ;
+    top:10px;
+}
+
+#mp .tracksong .nowplay marquee{
+    margin-top:8px;
+    font-family:'Josefin Sans';
+}
+
+progress{
+    width:calc(50vw - 12px);
+    height:6px;
+}
+
+@keyframes play1{
+    0%{top:20px;}
+    20%{top:40px;}
+    40%{top:4px;}
+    60%{top:25px;}
+    80%{top:30px;}
+    100%{top:20px;}
+}
+@keyframes play2{
+    0%{top:10px;}
+    20%{top:39px;}
+    40%{top:29px;}
+    60%{top:4px;}
+    80%{top:29px;}
+    100%{top:7px;}
+}
+@keyframes play3{
+    0%{top:15px;}
+    20%{top:10px;}
+    40%{top:43px;}
+    60%{top:9px;}
+    80%{top:45px;}
+    100%{top:15px;}
+}
+@keyframes play4{
+    0%{top:20px;}
+    20%{top:8px;}
+    40%{top:10px;}
+    60%{top:39px;}
+    80%{top:15px;}
+    100%{top:20px;}
+}
+
+
+
+
