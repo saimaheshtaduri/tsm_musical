@@ -5,6 +5,7 @@ $(document).ready(function(){
 /* ======= start button ===========*/
     $("#logo button").click(function(){
         $("#backpage").css("z-index","6");
+        $("#logo").css("opacity","0");
     });
     
 /* ======= Menu button ============*/
