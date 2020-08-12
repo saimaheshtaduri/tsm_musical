@@ -378,7 +378,7 @@ fieldset{
 }
 
 #menu{
-    margin:20vh 30vw;
+    margin:20vh calc(50vw - 65px);
     width:170px;
     /*height:350px;*/
     background-color:white;
