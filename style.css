@@ -177,7 +177,7 @@
 
 #backpage{
     width:99.8vw;
-    max-height:100vh;
+
     background-color:#ff80bf;
     position:absolute;
     z-index:4;
@@ -185,7 +185,7 @@
     box-shadow:2px 2px 2px 2px rgba(0,0,0,.2);
     padding-left:5px;
     padding-right:5px;
-    overflow-y:auto;
+
     overflow-x:hidden;
     box-sizing:border-box ;
     border:2px groove white;
