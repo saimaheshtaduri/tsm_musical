@@ -177,7 +177,7 @@
 
 #backpage{
     width:99.8vw;
-
+    height:100vh;
     background-color:#ff80bf;
     position:absolute;
     z-index:4;
@@ -374,6 +374,7 @@ fieldset{
     z-index:3;
     background-color:rgba(0,0,0,.2);
     height:100vh;
+    width:100vw;
 }
 
 #menu{
