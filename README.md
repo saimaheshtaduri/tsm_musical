@@ -54,7 +54,7 @@ where "url you just copied" (without the quotation marks) is the url to this rep
 
 4. Change the repository directory
 ```bash
-cd algorithm-visualizer
+cd tsm_musical
 ```
 
 5. Create a branch
